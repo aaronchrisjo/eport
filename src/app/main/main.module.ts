@@ -4,12 +4,16 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ResumeComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +21,9 @@ import { HomeComponent } from './home/home.component';
   ],
   exports:[
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ResumeComponent
   ]
 })
 export class MainModule { }
