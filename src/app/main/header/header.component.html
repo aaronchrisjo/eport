@@ -2,11 +2,13 @@
   <div class="container mx-auto flex items-center justify-between">
     <a routerLink="/" class="text-3xl font-semibold text-black">CJ</a>
     <div class="space-x-12">
-      <a routerLink="/" class="text-gray-800 hover:text-gray-800 transition-colors duration-300 ease-in-out">Home</a>
-      <a routerLink="/about" class="text-gray-800 hover:text-gray-800 transition-colors duration-300 ease-in-out">About</a>
-      <a routerLink="/resume" class="text-gray-800 hover:text-gray-800 transition-colors duration-300 ease-in-out">Resume</a>
-      <a routerLink="/certificates" class="text-gray-800 hover:text-gray-800 transition-colors duration-300 ease-in-out">Certificates</a>
-      <a routerLink="/contact" class="text-gray-800 hover:text-gray-800 transition-colors duration-300 ease-in-out">Contact</a>
+      <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">Home</a>
+      <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">About</a>
+      <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">Resume</a>
+      <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">Certificates</a>
+      <a (click)="openContactModal()" class="text-black hover:text-blue-800 transition-colors duration-300">Contact</a>
     </div>
   </div>
+  <!-- Include the ContactComponent and bind the visibility state -->
+  <app-contact [isVisible]="isContactModalVisible" (close)="isContactModalVisible = false"></app-contact>
 </nav>

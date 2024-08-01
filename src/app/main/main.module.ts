@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ResumeComponent } from './resume/resume.component';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { ResumeComponent } from './resume/resume.component';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactComponent
   ]
 })
 export class MainModule { }
