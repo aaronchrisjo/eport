@@ -1,21 +1,31 @@
-<nav class="bg-white text-gray-400 p-4">
-  <div class="container mx-auto flex items-center justify-between dark:bg-grey-900">
-    <a routerLink="/" class="text-3xl font-semibold text-black">CJ</a>
+<nav class="bg-white text-gray-400 p-4 dark:bg-black dark:text-white">
+  <div class="container mx-auto flex items-center justify-between dark:bg-black dark:text-white">
+    <a routerLink="/" class="text-3xl font-semibold text-black dark:text-white">CJ</a>
 
-    <button (click)="isMenuOpen = !isMenuOpen" class="md:hidden flex items-center text-gray-800 hover:text-blue-800 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
+    <!-- Mobile Navigation Section -->
+    <div class="md:hidden flex items-center">
+      <!-- Dark Mode Toggle Button for Mobile -->
+      <button (click)="toggleDarkMode()" class="p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 focus:outline-none mr-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707m-12.728 0l-.707.707m12.728-12.728l-.707.707M5.636 5.636l-.707-.707"></path>
+        </svg>
+      </button>
 
+      <button (click)="isMenuOpen = !isMenuOpen" class="flex items-center text-gray-800 hover:text-blue-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Navigation Links -->
     <div class="hidden md:flex items-center space-x-12">
-      <!-- Navigation Links -->
-      <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">About</a>
-      <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">Projects</a>
-      <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out">Certificates</a>
-      <a (click)="openContactModal()" routerLink="/" class="text-black hover:text-blue-800 transition-colors duration-300">Contact</a>
+      <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">About</a>
+      <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">Projects</a>
+      <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">Certificates</a>
+      <a (click)="openContactModal()" routerLink="/" class="text-black hover:text-blue-800 transition-colors duration-300 dark:bg-black dark:text-white">Contact</a>
 
-      <!-- Dark Mode Toggle Button -->
+      <!-- Dark Mode Toggle Button for Desktop -->
       <button (click)="toggleDarkMode()" class="p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707m-12.728 0l-.707.707m12.728-12.728l-.707.707M5.636 5.636l-.707-.707"></path>
@@ -24,15 +34,13 @@
     </div>
   </div>
 
-  <!-- Mobile Navigation Links -->
-  <div class="md:hidden">
-    <div [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="flex flex-col items-center mt-4 space-y-4">
-      <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Home</a>
-      <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">About</a>
-      <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Projects</a>
-      <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Certificates</a>
-      <a (click)="openContactModal()" routerLink="/contact" class="text-black hover:text-blue-800 transition-colors duration-300" (click)="isMenuOpen = false">Contact</a>
-    </div>
+  <!-- Mobile Navigation Menu -->
+  <div [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden flex flex-col items-center mt-4 space-y-4">
+    <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Home</a>
+    <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">About</a>
+    <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Projects</a>
+    <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Certificates</a>
+    <a (click)="openContactModal()" routerLink="/contact" class="text-black hover:text-blue-800 transition-colors duration-300" (click)="isMenuOpen = false">Contact</a>
   </div>
 
   <!-- Include the ContactComponent and bind the visibility state -->
