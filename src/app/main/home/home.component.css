@@ -1,0 +1,26 @@
+/* Keyframes for waving motion */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-45deg); }
+    50% { transform: rotate(45deg); }
+    75% { transform: rotate(-45deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Apply the animation to the emoji */
+  .emoji-wave {
+    display: inline-block;
+    animation: wave 10s ease-in-out;
+  }
+  
+  /* Ensure the animation repeats for 3 seconds */
+  @keyframes wave-extended {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(35deg); }
+  }
+  
+  .emoji-wave-extended {
+    display: inline-block;
+    animation: wave-extended 2s ease-in-out;
+  }
+  

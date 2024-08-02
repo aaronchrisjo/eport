@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isContactModalVisible = false;
+  isMenuOpen = false; 
 
   openContactModal() {
     this.isContactModalVisible = true;

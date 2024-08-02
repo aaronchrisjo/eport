@@ -1,0 +1,16 @@
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-box:hover {
+    transform: scale(1.1);
+  }
+  
+  img {
+    max-width: 100%;
+    height:auto
+  }
+  
