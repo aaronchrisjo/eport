@@ -9,6 +9,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+import { AchievmentsComponent } from './achievments/achievments.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SkillsComponent } from './skills/skills.component';
     ResumeComponent,
     ContactComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsComponent,
+    AchievmentsComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { SkillsComponent } from './skills/skills.component';
     ResumeComponent,
     ContactComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsComponent,
+    AchievmentsComponent
   ]
 })
 export class MainModule { }
