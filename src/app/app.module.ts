@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, HostListener, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,7 @@ import { MainModule } from './main/main.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainModule
+    MainModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
