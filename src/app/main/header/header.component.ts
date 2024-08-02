@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isContactModalVisible = false;
   isMenuOpen = false; 
+
+  constructor(private darkModeService: ThemeService) {}
+
+  toggleDarkMode() {
+    this.darkModeService.toggleDarkMode();
+  }
 
   openContactModal() {
     this.isContactModalVisible = true;
