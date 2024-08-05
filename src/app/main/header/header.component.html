@@ -37,7 +37,7 @@
 
   <!-- Mobile Navigation Menu -->
   <div [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden flex flex-col items-center mt-4 space-y-4">
-    <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Home</a>
+    <!-- <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Home</a> -->
     <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">About</a>
     <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Projects</a>
     <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Certificates</a>
