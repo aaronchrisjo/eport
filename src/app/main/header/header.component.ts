@@ -19,4 +19,8 @@ export class HeaderComponent {
   openContactModal() {
     this.isContactModalVisible = true;
   }
+
+  showAlert(){
+    alert('This part is not yet setup for mobile devices. Please scroll to see full for now :)')
+  }
 }
