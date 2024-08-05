@@ -11,7 +11,7 @@
         </svg>
     </button>
 
-      <button (click)="isMenuOpen = !isMenuOpen" class="flex items-center text-gray-800 hover:text-blue-800 focus:outline-none">
+      <button (click)="isMenuOpen = !isMenuOpen" class="flex items-center text-gray-800 hover:text-blue-800 focus:outline-none dark:text-gray-300">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -37,11 +37,11 @@
 
   <!-- Mobile Navigation Menu -->
   <div [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden flex flex-col items-center mt-4 space-y-4">
-    <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Home</a>
-    <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">About</a>
-    <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Projects</a>
-    <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out" (click)="isMenuOpen = false">Certificates</a>
-    <a (click)="openContactModal()" routerLink="/contact" class="text-black hover:text-blue-800 transition-colors duration-300" (click)="isMenuOpen = false">Contact</a>
+    <a routerLink="/" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Home</a>
+    <a routerLink="/about" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">About</a>
+    <a routerLink="/resume" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Projects</a>
+    <a routerLink="/certificates" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 ease-in-out dark:bg-black dark:text-white" (click)="isMenuOpen = false">Certificates</a>
+    <a (click)="openContactModal()" routerLink="/" class="text-black hover:text-blue-800 transition-colors duration-300 dark:bg-black dark:text-white" (click)="isMenuOpen = false">Contact</a>
   </div>
 
   <!-- Include the ContactComponent and bind the visibility state -->
