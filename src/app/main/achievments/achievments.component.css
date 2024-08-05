@@ -1,0 +1,36 @@
+/* Add to your styles.css or Tailwind CSS config */
+
+/* Certificate Card Hover Effect */
+.group {
+    position: relative;
+  }
+  
+  .group img {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .group .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .group .absolute span {
+    font-size: 2rem; /* Adjust the size as needed */
+  }
+  
+  .group:hover .absolute {
+    opacity: 1;
+  }
+  
+  .group:hover img {
+    opacity: 0.5;
+  }
+  

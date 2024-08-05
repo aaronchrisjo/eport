@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './achievments.component.css'
 })
 export class AchievmentsComponent {
-
+  selectedImage: string | null=null;
+  openModal(imageUrl:string){
+    this.selectedImage = imageUrl;
+  }
+  closeModal(){
+    this.selectedImage = null;
+  }
 }

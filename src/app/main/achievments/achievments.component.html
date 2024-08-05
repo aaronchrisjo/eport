@@ -1,37 +1,50 @@
-<section class="bg-white flex flex-col items-center justify-center p-6 mb-10  dark:bg-black dark:text-white">
-    <div class="bg-white p-4 max-w-4xl mx-auto  dark:bg-black dark:text-white">
-      <h1 class="text-3xl text-center font-bold mb-6">Achievements</h1>
-      <h2 class="text-xl font-semibold mb-4 text-center">Some achievments I'm proud of:</h2>
-      
-      <div class="mt-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-          <!-- Certificate 1 -->
-          <div class="bg-white p-2 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl  dark:bg-black dark:text-white">
-            <img src="assets/certificates/certificate-1.png" alt="Certificate 1" class="w-full h-auto rounded-lg">
-            <h4 class="text-lg font-semibold mt-4 text-center">Head of Sponsorship</h4>
-            <p class="text-gray-700 text-center  dark:bg-black dark:text-white">TedX FISAT</p>
-            <p class="text-gray-600 text-center  dark:bg-black dark:text-white">2024</p>
+<section class="bg-white flex flex-col items-center justify-center p-6 mb-10 dark:bg-black dark:text-white">
+  <div class="bg-white p-4 max-w-4xl mx-auto dark:bg-black dark:text-white">
+    <h1 class="text-3xl text-center font-bold mb-6">Achievements</h1>
+    <h2 class="text-xl font-semibold mb-4 text-center">Some achievements I'm proud of:</h2>
+
+    <div class="mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Certificate 1 -->
+        <div class="relative bg-white p-2 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:bg-black dark:text-white group">
+          <img src="assets/certificates/certificate-1.png" alt="Certificate 1" class="w-full h-auto rounded-lg transition-opacity duration-300 ease-in-out group-hover:opacity-50">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer" (click)="openModal('assets/certificates/certificate-1.png')">
+            <span class="text-white text-4xl font-bold">+</span>
           </div>
-  
-          <!-- Certificate 2 -->
-          <div class="bg-white p-1 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl  dark:bg-black dark:text-white">
-            <img src="assets/certificates/certificate-2.png" alt="Certificate 2" class="w-full h-auto rounded-lg">
-            <h4 class="text-lg font-semibold mt-4 text-center">ICEFOSS Hackfit Hackathon</h4>
-            <p class="text-gray-700 text-center  dark:bg-black dark:text-white">ACM</p>
-            <p class="text-gray-600 text-center dark:bg-black dark:text-white">2023</p>
-          </div>
-  
-          <!-- Certificate 3 -->
-          <div class="bg-white p-1 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:bg-black dark:text-white">
-            <img src="assets/certificates/certificate-3.png" alt="Certificate 3" class="w-full h-auto rounded-lg">
-            <h4 class="text-lg font-semibold mt-4 text-center">Celestia Math Quiz</h4>
-            <p class="text-gray-700 text-center dark:bg-black dark:text-white">ACM</p>
-            <p class="text-gray-600 text-center dark:bg-black dark:text-white">2023</p>
-          </div>
-          
-          <!-- Add more certificates as needed -->
+          <h4 class="text-lg font-semibold mt-4 text-center">Head of Sponsorship</h4>
+          <p class="text-gray-700 text-center dark:text-white">TedX FISAT</p>
+          <p class="text-gray-600 text-center dark:text-white">2024</p>
         </div>
+
+        <!-- Certificate 2 -->
+        <div class="relative bg-white p-2 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:bg-black dark:text-white group">
+          <img src="assets/certificates/certificate-2.png" alt="Certificate 2" class="w-full h-auto rounded-lg transition-opacity duration-300 ease-in-out group-hover:opacity-50">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer" (click)="openModal('assets/certificates/certificate-2.png')">
+            <span class="text-white text-4xl font-bold">+</span>
+          </div>
+          <h4 class="text-lg font-semibold mt-4 text-center">ICEFOSS Hackfit Hackathon</h4>
+          <p class="text-gray-700 text-center dark:text-white">ACM</p>
+          <p class="text-gray-600 text-center dark:text-white">2023</p>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="relative bg-white p-2 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:bg-black dark:text-white group">
+          <img src="assets/certificates/certificate-3.png" alt="Certificate 3" class="w-full h-auto rounded-lg transition-opacity duration-300 ease-in-out group-hover:opacity-50">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer" (click)="openModal('assets/certificates/certificate-3.png')">
+            <span class="text-white text-4xl font-bold">+</span>
+          </div>
+          <h4 class="text-lg font-semibold mt-4 text-center">Celestia Math Quiz</h4>
+          <p class="text-gray-700 text-center dark:text-white">ACM</p>
+          <p class="text-gray-600 text-center dark:text-white">2023</p>
+        </div>
+
+        <!-- Add more certificates as needed -->
       </div>
     </div>
-  </section>
-  
+  </div>
+
+  <!-- Modal for Enlarged Image -->
+  <div *ngIf="selectedImage" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" (click)="closeModal()">
+    <img [src]="selectedImage" class="max-w-full max-h-full p-4 cursor-pointer" (click)="$event.stopPropagation()">
+  </div>
+</section>
