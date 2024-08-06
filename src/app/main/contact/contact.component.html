@@ -1,8 +1,13 @@
 <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center" *ngIf="isVisible">
   <div class="bg-slate-200 p-6 rounded-lg shadow-lg w-11/12 md:w-1/3 relative dark:bg-gray-900 dark:text-white">
-    <button (click)="onClose()" class="absolute top-5 right-5 text-gray-500 hover:text-gray-700">
-      &times;
-    </button>
+    <button (click)="onClose()"
+        class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300 ease-in-out rounded-full border border-transparent bg-transparent hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+</button>
+
+
     <h2 class="text-2xl font-semibold mb-4 text-black text-center dark:bg-gray-900 dark:text-white">Let's have a chat !</h2>
     <form>
       <div class="mb-4">
