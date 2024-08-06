@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  isContactModalVisible = false;
 
+  openContactModal() {
+    this.isContactModalVisible = true;
+    window.scrollTo({top:0, behavior:'smooth'})
+  }
 }
