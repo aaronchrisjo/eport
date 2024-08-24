@@ -11,9 +11,10 @@ export class ThemeService {
   }
 
   initializeDarkMode() {
-    if (localStorage.getItem('dark-mode') === 'true') {
+    // Default to dark mode if no preference is set
+    const darkModePreference = localStorage.getItem('dark-mode');
+    if (darkModePreference === null || darkModePreference === 'true') {
       document.body.classList.add('dark');
     }
   }
-  
 }
