@@ -22,10 +22,12 @@
         <h3 class="text-xl font-semibold">Birthday:</h3>
         <p class="text-lg text-gray-700">25 September 2002</p>
       </div> -->
-      <div class="mb-6">
-        <h3 class="text-xl font-semibold">City:</h3>
-        <p class="text-lg text-gray-700 dark:bg-black dark:text-white">Trivandrum, India</p>
-      </div>
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold">City:</h3>
+      <p class="text-lg text-gray-700 dark:bg-black dark:text-white">
+        Trivandrum, India
+      </p>
+    </div>
     <div class="mb-6">
       <h3 class="text-xl font-semibold">Website:</h3>
       <a
@@ -38,33 +40,48 @@
     <div class="mb-6">
       <h3 class="text-xl font-semibold">Resume:</h3>
       <a
-        href="assets/aaron-resume-02.pdf"
+        href="assets/aaron-resume-doha.pdf"
         class="text-blue-500 hover:underline"
         target="_blank"
         >View my Resume here</a
       >
     </div>
     <div class="mb-6"></div>
-      <h3 class="text-xl font-semibold">My Blog (under development): </h3>
-      <a
-        href="https://cj-blogs.vercel.app/"
-        class="text-blue-500 hover:underline"
-        target="_blank"
-        >View my Blog here</a
-      >
-    </div>
+    <h3 class="text-xl font-semibold">My Blog (under development):</h3>
+    <a
+      href="https://cj-blogs.vercel.app/"
+      class="text-blue-500 hover:underline"
+      target="_blank"
+      >View my Blog here</a
+    >
+  </div>
 </section>
 
 <!-- Open Contact Button -->
 <div class="fixed bottom-5 right-5">
-  <button (click)="openContactModal()" class="bg-gradient-to-r from-blue-700 to-teal-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+  <button
+    (click)="openContactModal()"
+    class="bg-gradient-to-r from-blue-700 to-teal-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 32 32"
+      fill="currentColor"
+    >
       <g data-name="7-Email-Arrow up">
-        <path d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h13v-2H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23V17h2V7a3 3 0 0 0-3-3zM16 14.77 3.72 6h24.56z"/>
-        <path d="m24.29 18.29-4 4 1.41 1.41 2.3-2.29V29h2v-7.59l2.29 2.29 1.41-1.41-4-4a1 1 0 0 0-1.41 0z"/>
+        <path
+          d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h13v-2H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23V17h2V7a3 3 0 0 0-3-3zM16 14.77 3.72 6h24.56z"
+        />
+        <path
+          d="m24.29 18.29-4 4 1.41 1.41 2.3-2.29V29h2v-7.59l2.29 2.29 1.41-1.41-4-4a1 1 0 0 0-1.41 0z"
+        />
       </g>
     </svg>
   </button>
-  <app-contact [isVisible]="isContactModalVisible" (close)="isContactModalVisible = false"></app-contact>
+  <app-contact
+    [isVisible]="isContactModalVisible"
+    (close)="isContactModalVisible = false"
+  ></app-contact>
 </div>
-
